@@ -1,0 +1,3 @@
+export const overview_data = 'At Perceptron, were looking for fun ideas that we can run for our simulation technology and invite you to share your thoughts. If youre interested in the simulations weve already conducted or are currently running, feel free to check out our '
+
+export const simulations_heading = 'Here are a few examples of simulations weve conceptualized. You can use these as inspiration to create your own ideas:'

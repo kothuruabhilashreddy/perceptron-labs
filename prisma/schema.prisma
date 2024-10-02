@@ -1,0 +1,31 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+
+model Simulation {
+  id        Int      @id @default(autoincrement())
+  userName  String
+  title     String
+  comment   String
+  createdAt DateTime @default(now())
+  voteCount Int      @default(0)
+  votes     Vote[]   @relation("SimulationVotes")
+}
+
+model Vote {
+  id            Int       @id @default(autoincrement())
+  simulation    Simulation @relation("SimulationVotes", fields: [simulationId], references: [id])
+  simulationId  Int
+  userId        String 
+  voteType      Int
+  createdAt     DateTime  @default(now())
+}
