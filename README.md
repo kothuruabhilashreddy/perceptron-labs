@@ -40,10 +40,8 @@ To observe the behaviour, the application need to run in multiple ports parallel
 All the actions done by a user are replicated in other user interface upon reloading the screen
 
 ### Run the below commands separately in different terminals
-bash
-```
-npm run dev
-set PORT=4000 && npm run dev
-set PORT=5000 && npm run dev
 
-```
+- npm run dev
+- set PORT=4000 && npm run dev
+- set PORT=5000 && npm run dev
+
